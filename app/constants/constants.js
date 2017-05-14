@@ -1,0 +1,4 @@
+export const types = {
+    CHANGE_MESSAGE: 'CHANGE_MESSAGE',
+    OBTENIENDO_CLIMA: 'OBTENIENDO_CLIMA'
+}

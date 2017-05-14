@@ -1,0 +1,17 @@
+.frame{
+    border:1px solid #263238;
+    max-width: 998px;
+    margin: 0 auto;
+    height: 15em;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    align-self: center;
+}
+
+.submit-button{
+    margin-top: 15px;
+    text-align: center;
+}

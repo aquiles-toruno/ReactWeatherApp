@@ -1,0 +1,33 @@
+.menu-navegacion{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.links{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #263238;
+    overflow: hidden;
+}
+
+.links li{
+    float: left;
+    line-height: 5px;
+    margin: 7px 0;
+}
+
+.links li a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: #ddd;
+    font-weight: bold;
+    border-right: 1px solid #fff;
+}
+
+.links li a:hover{
+background-color: #37474F;
+color: #fff;
+}
