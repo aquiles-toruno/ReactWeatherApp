@@ -1,0 +1,1 @@
+Primera app usando React y Redux.
