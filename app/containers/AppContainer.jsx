@@ -5,7 +5,7 @@ import {BrowserRouter, Route, Link} from 'react-router-dom';
 import MainContainer from 'MainContainer';
 import Nav from 'Nav';
 
-var store = require('configureStore').configure();
+var store = require('configureStore').configure();;
 
 store.subscribe(() => {
     console.log('New state', store.getState());
