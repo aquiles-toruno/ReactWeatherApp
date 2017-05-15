@@ -56,5 +56,5 @@ class Form extends React.Component {
 }
 
 export default connect((state) => {
-    return {message: state.message, obteniendo: state.obteniendo}
+    return {message: state.message}
 })(Form);
