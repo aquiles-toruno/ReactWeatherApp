@@ -19,18 +19,20 @@ module.exports = {
             EstilosNav: 'app/components/Nav/styles.css',
             /*************Form**************/
             Form: 'app/components/Form/Form.jsx',
-            FormActions:'app/actions/form/FormActions.jsx',
-            FormReducer:'app/reducers/form/FormReducer.jsx',
+            FormActions: 'app/actions/form/FormActions.jsx',
+            FormReducer: 'app/reducers/form/FormReducer.jsx',
             /*************Message**************/
             Message: 'app/components/Message/Message.jsx',
             EstilosMessage: 'app/components/Message/styles.css',
-            /*************Message**************/
+            /*************Loading**************/
             Loading: 'app/components/Loading/Loading.jsx',
             EstilosLoading: 'app/components/Loading/styles.css',
-            /*************Stores**************/            
-            configureStore:'app/store/configureStore.jsx',
+            /*************Map**************/
+            GoogleMap: 'app/components/Map/Map.jsx',
+            /*************Stores**************/
+            configureStore: 'app/store/configureStore.jsx',
             /*************Constants**************/
-            Constants:'app/constants/constants.js'
+            Constants: 'app/constants/constants.js'
         },
         extensions: ['.js', '.jsx']
     },

@@ -8,6 +8,10 @@ export var obteniendoClima = (obteniendoClima) => {
     return {type: 'OBTENIENDO_CLIMA', obteniendoClima};
 };
 
+export var actualizandoUbicacion = (coordenadas) => {
+    return {type: 'ACTUALIZANDO_UBICACION', coordenadas};
+}
+
 export var getWeather = (country) => {
     return (dispatch, getState) => {
         dispatch(obteniendoClima(true));
@@ -16,6 +20,7 @@ export var getWeather = (country) => {
             .get(url)
             .then(function (response) {
                 dispatch(obteniendoClima(false));
+                dispatch(actualizandoUbicacion(response.data.coord));
                 dispatch(changeMessage("It's " + response.data.main.temp + " in " + country));
             });
     }

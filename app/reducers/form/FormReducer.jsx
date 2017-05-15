@@ -19,3 +19,15 @@ export var obteniendoClima = (state = false, action) => {
             return state;
     }
 };
+
+export var actualizandoUbicacion = (state = {
+    lat: 12.13,
+    lon: -86.25
+}, action) => {
+    switch (action.type) {
+        case constants.types.ACTUALIZANDO_UBICACION:
+            return action.coordenadas;
+        default:
+            return state;
+    }
+};

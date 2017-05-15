@@ -1,8 +1,12 @@
-.frame{
-    border:1px solid #263238;
+.container-weather{
+border:1px solid #263238;
     max-width: 998px;
     margin: 0 auto;
-    height: 15em;
+    height: 32em;
+}
+
+.frame{
+    margin-top: 25px;
     display: flex;
     justify-content: center;
 }
@@ -14,4 +18,9 @@
 .submit-button{
     margin-top: 15px;
     text-align: center;
+}
+
+.mapa{
+    margin: 25px 0 20px 0;
+    padding: 0 10px;
 }
