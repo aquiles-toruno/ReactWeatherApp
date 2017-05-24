@@ -27,6 +27,8 @@ module.exports = {
             /*************Loading**************/
             Loading: 'app/components/Loading/Loading.jsx',
             EstilosLoading: 'app/components/Loading/styles.css',
+            /*************ModalError**************/
+            ModalError:'app/components/ModalError/ModalError.jsx',
             /*************Map**************/
             GoogleMap: 'app/components/Map/Map.jsx',
             /*************Stores**************/
