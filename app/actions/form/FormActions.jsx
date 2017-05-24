@@ -12,6 +12,10 @@ export var actualizandoUbicacion = (coordenadas) => {
     return {type: 'ACTUALIZANDO_UBICACION', coordenadas};
 }
 
+export var errorObteniendoClima = (mensajeError) => {
+    return {type: 'ERROR_OBTENIENDO_CLIMA', mensajeError}
+}
+
 export var getWeather = (country) => {
     return (dispatch, getState) => {
         dispatch(obteniendoClima(true));
@@ -22,6 +26,10 @@ export var getWeather = (country) => {
                 dispatch(obteniendoClima(false));
                 dispatch(actualizandoUbicacion(response.data.coord));
                 dispatch(changeMessage("It's " + response.data.main.temp + " in " + country));
+            })
+            .catch(error => {
+                dispatch(obteniendoClima(false));
+                dispatch(errorObteniendoClima({existeError: true, mensaje: error.response.data.message}));
             });
     }
 }

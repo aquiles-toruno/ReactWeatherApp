@@ -58,5 +58,5 @@ class GoogleMap extends React.Component {
 }
 
 export default connect((state) => {
-    return {coordenadas: state.coordenadas, obteniendo: state.obteniendo}
+    return {coordenadas: state.coordenadas}
 })(GoogleMap);

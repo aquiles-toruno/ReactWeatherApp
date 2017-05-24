@@ -1,8 +1,10 @@
 import React from 'react';
 import Message from 'Message';
 import Loading from 'Loading';
+import ModalError from 'ModalError';
 import {connect} from 'react-redux';
 import * as FormActions from 'FormActions';
+import {default as swal} from 'sweetalert';
 
 class Form extends React.Component {
     constructor(props) {
@@ -18,7 +20,7 @@ class Form extends React.Component {
     // country: e             .target             .value .toUpperCase() }); }
 
     render() {
-        var {dispatch, message, obteniendo} = this.props;
+        var {dispatch, message, obteniendo, error} = this.props;
 
         var obtenerClima = (e, ciudad) => {
             e.preventDefault();
@@ -29,6 +31,10 @@ class Form extends React.Component {
 
         if (obteniendo) {
             componente = <Loading></Loading>;
+        } else if (error.existeError && !obteniendo) {
+            swal("Error", error.mensaje, "error");
+            componente = null;
+            // componente = <ModalError mensaje={error.mensaje}></ModalError>;
         } else {
             componente = <Message name={message}/>;
         }
@@ -56,5 +62,5 @@ class Form extends React.Component {
 }
 
 export default connect((state) => {
-    return {message: state.message, obteniendo: state.obteniendo}
+    return {message: state.message, obteniendo: state.obteniendo, error: state.error}
 })(Form);

@@ -31,3 +31,15 @@ export var actualizandoUbicacion = (state = {
             return state;
     }
 };
+
+export var errorObteniendoClima = (state = {
+    existeError: false,
+    mensaje: ''
+}, action) => {
+    switch (action.type) {
+        case constants.types.ERROR_OBTENIENDO_CLIMA:
+            return action.mensajeError;
+        default:
+            return state;
+    }
+};
