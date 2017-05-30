@@ -16179,7 +16179,7 @@ var errorObteniendoClima = exports.errorObteniendoClima = function errorObtenien
 var getWeather = exports.getWeather = function getWeather(country) {
     return function (dispatch, getState) {
         dispatch(obteniendoClima(true));
-        var url = '//api.openweathermap.org/data/2.5/weather?q=' + country + '&appid=a1c451d46287d402e10e7fda3a673920&units=metric';
+        var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + country + '&appid=a1c451d46287d402e10e7fda3a673920&units=metric';
         _axios2.default.get(url).then(function (response) {
             dispatch(errorObteniendoClima({ existeError: false, mensaje: '' }));
             dispatch(obteniendoClima(false));
