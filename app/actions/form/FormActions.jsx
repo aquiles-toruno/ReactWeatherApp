@@ -23,6 +23,7 @@ export var getWeather = (country) => {
         axios
             .get(url)
             .then(function (response) {
+                dispatch(errorObteniendoClima({existeError: false, mensaje: ''}));
                 dispatch(obteniendoClima(false));
                 dispatch(actualizandoUbicacion(response.data.coord));
                 dispatch(changeMessage("It's " + response.data.main.temp + " in " + country));
