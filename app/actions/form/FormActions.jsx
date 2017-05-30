@@ -18,7 +18,7 @@ export var errorObteniendoClima = (mensajeError) => {
 
 export var getWeather = (country) => {
     return (dispatch, getState) => {
-        dispatch(obteniendoClima(true));
+        dispatch(obteniendoClima(true)); 
         var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + country + '&appid=a1c451d46287d402e10e7fda3a673920&units=metric'
         axios
             .get(url)
