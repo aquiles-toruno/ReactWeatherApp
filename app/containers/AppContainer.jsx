@@ -7,9 +7,9 @@ import Nav from 'Nav';
 
 var store = require('configureStore').configure();
 
-store.subscribe(() => {
-    console.log('New state', store.getState());
-});
+// store.subscribe(() => {
+//     console.log('New state', store.getState());
+// });
 
 class AppContainer extends React.Component {
     render() {
