@@ -18,10 +18,10 @@ export var errorObteniendoClima = (mensajeError) => {
 
 export var getWeather = (country) => {
     return (dispatch, getState) => {
+
         dispatch(obteniendoClima(true));
-        var url = '//api.openweathermap.org/data/2.5/weather?q=' + country + '&appid=a1c451d46287d402e10e7fda3a673920&units=metric'
-        axios
-            .get(url)
+        var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + country + '&appid=a1c451d46287d402e10e7fda3a673920&units=metric'
+        axios.get(url)
             .then(function (response) {
                 dispatch(errorObteniendoClima({existeError: false, mensaje: ''}));
                 dispatch(obteniendoClima(false));
