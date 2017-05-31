@@ -27,6 +27,12 @@ module.exports = {
             /*************Loading**************/
             Loading: 'app/components/Loading/Loading.jsx',
             EstilosLoading: 'app/components/Loading/styles.css',
+            /*************Buscador**************/
+            Buscador:'app/components/Buscador/Buscador.jsx',
+            EstilosBuscador:'app/components/Buscador/styles.css',
+            Item:'app/components/Buscador/Item.jsx',
+            BuscadorActions: 'app/actions/buscador/BuscadorActions.jsx',
+            BuscadorReducer: 'app/reducers/form/BuscadorReducer.jsx',
             /*************ModalError**************/
             ModalError:'app/components/ModalError/ModalError.jsx',
             /*************Map**************/

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,8 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router-dom": "^4.1.1",
-    "sweetalert": "^1.1.3"
+    "sweetalert": "^1.1.3",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
@@ -28,6 +29,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.0",
+    "open": "0.0.5",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
