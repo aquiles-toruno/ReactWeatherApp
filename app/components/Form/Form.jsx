@@ -5,6 +5,7 @@ import ModalError from 'ModalError';
 import {connect} from 'react-redux';
 import * as FormActions from 'FormActions';
 import {default as swal} from 'sweetalert';
+import Buscador from 'Buscador';
 
 class Form extends React.Component {
     constructor(props) {
@@ -20,7 +21,7 @@ class Form extends React.Component {
     // country: e             .target             .value .toUpperCase() }); }
 
     render() {
-        var {dispatch, message, obteniendo, error} = this.props;
+        var {dispatch, message, obteniendo, error, paisSeleccionado} = this.props;
 
         var obtenerClima = (e, ciudad) => {
             e.preventDefault();
@@ -41,17 +42,13 @@ class Form extends React.Component {
         return (
             <form
                 onSubmit={(e) => {
-                obtenerClima(e, this.refs.ciudad.value);
-                this.refs.ciudad.value = '';
+                if (paisSeleccionado != null) {
+                    obtenerClima(e, paisSeleccionado);
+                }
             }}>
                 {componente}
                 <div>
-                    <input
-                        type="text"
-                        className="control"
-                        maxLength="50"
-                        placeholder="Type a country"
-                        ref="ciudad"/>
+                    <Buscador></Buscador>
                 </div>
                 <div className="submit-button">
                     <input type="submit" value="Get weather" className="button turquesa"/>
@@ -62,5 +59,5 @@ class Form extends React.Component {
 }
 
 export default connect((state) => {
-    return {message: state.message, obteniendo: state.obteniendo, error: state.error}
+    return {message: state.message, obteniendo: state.obteniendo, error: state.error, paisSeleccionado: state.paisSeleccionado}
 })(Form);

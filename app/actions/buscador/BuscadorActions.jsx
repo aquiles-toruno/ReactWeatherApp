@@ -13,6 +13,18 @@ export var errorObteniendoPaises = (errorObteniendoPaises) => {
     return {type: constants.types.ERROR_OBTENIENDO_PAISES, errorObteniendoPaises};
 }
 
+export var limpiarPaises = () => {
+    return {type: constants.types.LIMPIAR_PAISES}
+}
+
+export var paisIngresado = (pais) => {
+    return {type: constants.types.PAIS_INGRESADO, pais}
+}
+
+export var paisSeleccionado = (pais) => {
+    return {type: constants.types.PAIS_SELECCIONADO, pais}
+}
+
 export var obteniendoPaisesAPI = (pais) => {
     return (dispatch, getState) => {
         dispatch(obteniendoPaises(true));
