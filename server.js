@@ -6,7 +6,7 @@ var _ = require('underscore');
 const browsers = ['chrome', 'firefox', 'opera']
 
 var app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 app.use(function (req, res, next) {
     if (req.header['x-forwarded-proto'] === 'https') {
