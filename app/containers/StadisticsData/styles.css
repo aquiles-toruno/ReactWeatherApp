@@ -1,0 +1,52 @@
+#contenedor-main{
+    text-align: center;
+}
+
+.contenedor-main{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contenedor-descripcion{
+    font-size: 15px;
+    color: #95c7d5;
+    text-transform: capitalize;
+}
+
+#contendor-iconos{
+    margin-left: 35px;
+    position: relative;
+    top: 35%;
+}
+
+.contenedor-icono{
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 20%;
+    position: relative;
+    margin-bottom: 15px
+}
+
+.contenedor-item{
+    font-size: 40px;
+    line-height: 1;
+    float: left;
+}
+
+.contenedor-item-titulo{
+    font-size: 15px;
+    color: #4d4d4d;
+    line-height: 1.1;
+    font-weight: bold;
+    padding-left: 50px;
+}
+
+.contenedor-item-descripcion{
+    font-size: 13px;
+    font-style: italic;
+    color: #95c7d5;
+    float: none;
+    padding-left: 50px;
+    font-weight: bold;
+}

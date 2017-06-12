@@ -1,11 +1,11 @@
 import React from 'react';
 import Message from 'Message';
 import Loading from 'Loading';
-import ModalError from 'ModalError';
 import {connect} from 'react-redux';
 import * as FormActions from 'FormActions';
 import {default as swal} from 'sweetalert';
 import Buscador from 'Buscador';
+import WeatherDetailsLink from 'WeatherDetailsLink';
 
 class Form extends React.Component {
     constructor(props) {
@@ -29,15 +29,19 @@ class Form extends React.Component {
         }
 
         let componente = null;
+        let mostrarDetalle = null;
 
         if (obteniendo) {
             componente = <Loading></Loading>;
         } else if (error.existeError && !obteniendo) {
             swal("Error", error.mensaje, "error");
             componente = null;
-            // componente = <ModalError mensaje={error.mensaje}></ModalError>;
         } else {
             componente = <Message name={message}/>;
+
+            if (this.props.datosOpenWeatherMap != null) {
+                mostrarDetalle = <WeatherDetailsLink pais={paisSeleccionado.name}/>;
+            }
         }
         return (
             <form
@@ -47,8 +51,11 @@ class Form extends React.Component {
                 }
             }}>
                 {componente}
-                <div>
+                <div style={{
+                    textAlign: 'center'
+                }}>
                     <Buscador></Buscador>
+                    {mostrarDetalle}
                 </div>
                 <div className="submit-button">
                     <input type="submit" value="Get weather" className="button turquesa"/>
@@ -59,5 +66,5 @@ class Form extends React.Component {
 }
 
 export default connect((state) => {
-    return {message: state.message, obteniendo: state.obteniendo, error: state.error, paisSeleccionado: state.paisSeleccionado}
+    return {message: state.message, obteniendo: state.obteniendo, error: state.error, paisSeleccionado: state.paisSeleccionado, datosOpenWeatherMap: state.datosOpenWeatherMap}
 })(Form);

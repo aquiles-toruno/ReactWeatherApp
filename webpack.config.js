@@ -28,19 +28,26 @@ module.exports = {
             Loading: 'app/components/Loading/Loading.jsx',
             EstilosLoading: 'app/components/Loading/styles.css',
             /*************Buscador**************/
-            Buscador:'app/components/Buscador/Buscador.jsx',
-            EstilosBuscador:'app/components/Buscador/styles.css',
-            Item:'app/components/Buscador/Item.jsx',
+            Buscador: 'app/components/Buscador/Buscador.jsx',
+            EstilosBuscador: 'app/components/Buscador/styles.css',
+            Item: 'app/components/Buscador/Item.jsx',
             BuscadorActions: 'app/actions/buscador/BuscadorActions.jsx',
             BuscadorReducer: 'app/reducers/form/BuscadorReducer.jsx',
             /*************ModalError**************/
-            ModalError:'app/components/ModalError/ModalError.jsx',
+            ModalError: 'app/components/ModalError/ModalError.jsx',
             /*************Map**************/
             GoogleMap: 'app/components/Map/Map.jsx',
             /*************Stores**************/
             configureStore: 'app/store/configureStore.jsx',
             /*************Constants**************/
-            Constants: 'app/constants/constants.js'
+            Constants: 'app/constants/constants.js',
+            /*************StadisticsData**************/
+            StadisticsData: 'app/containers/StadisticsData/StadisticsData.jsx',
+            EstilosStadisticsData: 'app/containers/StadisticsData/styles.css',
+            /*************WeatherDetailsLink**************/
+            WeatherDetailsLink: 'app/components/WeatherDetailsLink/WeatherDetailsLink.jsx',
+            /*************IconWeather**************/
+            IconWeather: 'app/components/Icon.jsx'
         },
         extensions: ['.js', '.jsx']
     },

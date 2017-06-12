@@ -4,7 +4,6 @@ import {Provider} from 'react-redux'
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import MainContainer from 'MainContainer';
 import Nav from 'Nav';
-// import Buscador from 'Buscador';
 
 var store = require('configureStore').configure();
 
@@ -14,6 +13,7 @@ class AppContainer extends React.Component {
     render() {
         return (
             <div>
+                <Nav></Nav>
                 <MainContainer></MainContainer>
             </div>
         );
@@ -24,6 +24,6 @@ class AppContainer extends React.Component {
 ReactDOM.render(
     <Provider store={store}>
     <BrowserRouter>
-        <Route exact path="/" component={AppContainer}/>
+        <AppContainer/>
     </BrowserRouter>
 </Provider>, document.getElementById('app'));

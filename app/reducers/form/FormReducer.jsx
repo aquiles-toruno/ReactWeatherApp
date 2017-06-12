@@ -43,3 +43,12 @@ export var errorObteniendoClima = (state = {
             return state;
     }
 };
+
+export var datosOpenWeatherMap = (state = null, action) => {
+    switch (action.type) {
+        case constants.types.DATOS_OPEN_WEATHER_MAP:
+            return action.datos;
+        default:
+            return state;
+    }
+};

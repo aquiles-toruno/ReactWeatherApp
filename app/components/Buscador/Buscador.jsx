@@ -8,6 +8,7 @@ import Autosuggest from 'react-autosuggest';
 class Buscador extends React.Component {
     constructor(props) {
         super(props);
+        this.contador = null;
     }
 
     onChange = (event, {newValue}) => {
@@ -26,8 +27,15 @@ class Buscador extends React.Component {
         };
 
         var obtenerPaisesPorNombre = ({value}) => {
+            if (this.contador !== null) {
+                clearTimeout(this.contador);
+                console.log('peticion cancelada');
+            }
             if (value.length >= 3) {
-                dispatch(BuscadorActions.obteniendoPaisesAPI(value));
+                this.contador = setTimeout(() => {
+                    dispatch(BuscadorActions.obteniendoPaisesAPI(value));
+                    console.log('peticion enviada');
+                }, 500);
             }
         }
 

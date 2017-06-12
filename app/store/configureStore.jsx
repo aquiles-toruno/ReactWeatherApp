@@ -1,5 +1,5 @@
 import {createStore, compose, combineReducers, applyMiddleware} from 'redux';
-import {changeMessage, obteniendoClima, actualizandoUbicacion, errorObteniendoClima} from 'FormReducer';
+import {changeMessage, obteniendoClima, actualizandoUbicacion, errorObteniendoClima, datosOpenWeatherMap} from 'FormReducer';
 import {obteniendoPaises, paisIngresado, paisSeleccionado} from 'BuscadorReducer';
 import thunk from 'redux-thunk';
 
@@ -11,7 +11,8 @@ export var configure = () => {
         error: errorObteniendoClima,
         obteniendoPaises: obteniendoPaises,
         paisIngresado,
-        paisSeleccionado
+        paisSeleccionado,
+        datosOpenWeatherMap
     });
 
     var store = createStore(reducers, compose(applyMiddleware(thunk), window.devToolsExtension
