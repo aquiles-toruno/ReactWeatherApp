@@ -1,5 +1,5 @@
 var express = require('express');
-var open = require('open');
+// var open = require('open');
 var fs = require('fs');
 var _ = require('underscore');
 
@@ -43,8 +43,8 @@ app.listen(PORT, function () {
 
     if (PORT === 5000) {
         var browser = browsers[0];
-        open('http://localhost:5000', browser);
-        console.log('Opening ' + browser);
+        // open('http://localhost:5000', browser);
+        // console.log('Opening ' + browser);
     }
 });
 
